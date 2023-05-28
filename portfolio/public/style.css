@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "League Spartan";
   src: url("/League_Spartan/static/LeagueSpartan-Black.ttf") format("truetype");
