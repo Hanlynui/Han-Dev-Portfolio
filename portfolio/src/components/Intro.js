@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesDown, faHandshake } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import han from "./assets/linhanyuBRM.png";
 
 const Intro = () => {
   return (
@@ -19,13 +20,13 @@ const Intro = () => {
             style={{ color: "#ffd500" }}
           />
         </span>
-        , nice to meet you here! I'm a skilled Front End Software Engineer with
-        expertise in React, Redux, UI/UX design, AI, and project management.
-        Passionate about crafting intuitive and visually appealing web
-        applications that enhance user experiences, I bring project management
-        expertise to ensure seamless coordination and deliver exceptional
-        outcomes. Let's collaborate on innovative solutions that provide
-        remarkable value to your users.
+        , nice to meet you here! I'm your Front End Software Engineer in a suit
+        with expertise in React, Redux, UI/UX design, AI, and more... Passionate
+        about crafting intuitive and visually appealing web applications that
+        enhance user experiences, I bring project management expertise to ensure
+        seamless coordination and deliver exceptional outcomes. Let's
+        collaborate on innovative solutions that provide remarkable value to
+        your users.
       </p>
       <div
         className="flex justify-evenly
@@ -48,7 +49,7 @@ const Intro = () => {
       </div>
       <div>
         <img
-          src="/images/linhanyuBRM.png"
+          src={han}
           alt="Han"
           className="w-70 h-70 md:w-72 md:h-72 object-cover object-top bg-gradient-to-b from-gray-300 rounded-xl pt-5"
         ></img>
