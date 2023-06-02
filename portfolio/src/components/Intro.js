@@ -32,14 +32,22 @@ const Intro = () => {
         className="flex justify-evenly
          py-8 lg:py-16 text-3xl w-full md:w-1/4"
       >
-        <a href="https://www.linkedin.com/in/hlin/" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/hlin/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon
             icon={faLinkedin}
             alt="Han's LinkedIn Profile"
             className="cursor-pointer "
           />
         </a>
-        <a href="https://github.com/Hanlynui" rel="noopener noreferrer">
+        <a
+          href="https://github.com/Hanlynui"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon
             icon={faGithub}
             alt="Han's Github"
@@ -56,6 +64,7 @@ const Intro = () => {
         <a
           href="https://docs.google.com/document/d/1-B6rBqbHYNsm_YL0CxatxwbeWFtt8DV9/edit?usp=sharing&ouid=102197811022513384394&rtpof=true&sd=true"
           alt="resume"
+          target="_blank"
           rel="noopener noreferrer"
           className="flex items-center text-xl justify-center mt-10 bg-gradient-to-r from-gray-400 to-blue-900 text-white [y-2 rounded-lg"
         >

@@ -3,7 +3,7 @@ import Section from "./Section";
 import fidgetSpinnerWeb from "./assets/3dfidgetweb.png";
 import homePageRITH from "./assets/homepageRITH.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
@@ -15,6 +15,7 @@ const Projects = () => {
       github:
         "https://github.com/CapstoneGroupThree/Robin-In-the-Hood-Trading-Corp-1",
       site: "https://rith-trading.onrender.com/",
+      video: "https://www.youtube.com/watch?v=CEUu0Cvp3uU",
     },
     {
       image: fidgetSpinnerWeb,
@@ -28,7 +29,7 @@ const Projects = () => {
   return (
     <Section title="Projects 💻" subtitle="Here are some of my projects">
       <div className="grid gap-8 lg:gap-14 lg:grid-cols-2">
-        {projects.map(({ id, image, title, github, site }) => (
+        {projects.map(({ id, image, title, github, site, video }) => (
           <div
             key={id}
             className="max-w-lg flex shadow-lg shadow-gray-300 rounded-2xl duration-300 ease-in-out hover:scale-110 overflow-hidden"
@@ -61,6 +62,22 @@ const Projects = () => {
                   className="text-large cursor-pointer"
                 />
               </a>
+              {video ? (
+                <a
+                  href={video}
+                  alt="group video"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faYoutube}
+                    alt="project site"
+                    className="text-large cursor-pointer"
+                  />
+                </a>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         ))}
