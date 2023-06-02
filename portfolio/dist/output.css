@@ -1110,6 +1110,10 @@ video {
     width: 18rem;
   }
 
+  .md\:max-w-lg {
+    max-width: 32rem;
+  }
+
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1119,6 +1123,10 @@ video {
 @media (min-width: 1024px) {
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:max-w-xl {
+    max-width: 36rem;
   }
 
   .lg\:grid-cols-2 {
