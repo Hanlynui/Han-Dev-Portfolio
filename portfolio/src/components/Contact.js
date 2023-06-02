@@ -3,6 +3,9 @@ import Section from "./Section";
 
 const Contact = () => {
   //todo add a bot checker here, i want to make a contact section that will send me an email, also put my linkedin and other contact info up, maybe have my phone number and email to show after users settle a bot check
+
+  //todo fix clearing message on submit
+  //todo also save state for light and dark mode
   return (
     <Section title="Contact 📱" subtitle="Let's get in touch!">
       <div className="p-8 text-center w-full mx-auto md:max-w-lg lg:max-w-xl">
