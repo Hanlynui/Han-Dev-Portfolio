@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Section from "./Section";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const [query, setQuery] = useState({
@@ -8,6 +9,12 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
+  const [captchaValue, setCaptchaValue] = useState(null);
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
 
   const handleParam = () => (e) => {
     const name = e.target.name;
@@ -21,6 +28,13 @@ const Contact = () => {
   // todo change alert to i want to make a contact section that will send me an email, also put my linkedin and other contact info up, maybe have my phone number and email to show after users settle a bot check
   const formSubmit = (e) => {
     e.preventDefault();
+
+    if (captchaValue === null) {
+      // The reCAPTCHA has not been completed, so we don't submit the form
+      alert("Please complete the reCAPTCHA");
+      return;
+    }
+
     const formData = new FormData();
     Object.entries(query).forEach(([key, value]) => {
       formData.append(key, value);
@@ -30,7 +44,7 @@ const Contact = () => {
       body: formData,
     }).then(() => {
       setQuery({ name: "", phone: "", email: "", message: "" });
-      alert("Contact Form Submitted :)");
+      alert("Message Sent :)");
     });
   };
 
@@ -91,6 +105,11 @@ const Contact = () => {
                 onChange={handleParam()}
               ></textarea>
             </div>
+            <ReCAPTCHA
+              sitekey="6Lc0D18mAAAAAJjNrzAMVo0hDu-zgRtsjZQuDhCo"
+              onChange={handleCaptchaChange}
+              className="flex justify-center"
+            />
             <div className="flex justify-center">
               <button className="my-8 bg-gradient-to-r  from-gray-400 to-blue-900 text-white px-6 py-3 font-bold uppercase tracking-wider cursor-pointer hover:scale-105 duration-200 rounded-lg ">
                 Send Message
