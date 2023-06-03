@@ -9,7 +9,7 @@ const Intro = () => {
     <div className="min-h-screen flex flex-col justify-start items-center p-6 text-center">
       {" "}
       <h2 className="text-5xl text-rose-700 uppercase font-bold">Han Yu Lin</h2>
-      <h3 className="py-3 text-2xl">Frontend Software Engineer</h3>
+      <h3 className="py-3 text-2xl">Fullstack Software Engineer</h3>
       <p className="max-w-xl font-light text-gray-500">
         Hello
         <span>
@@ -20,7 +20,7 @@ const Intro = () => {
             style={{ color: "#ffd500" }}
           />
         </span>
-        , nice to meet you here! I'm your Front End Software Engineer in a suit
+        , nice to meet you here! I'm your Fullstack Software Engineer in a suit
         with expertise in React, Redux, UI/UX design, AI, and more... Passionate
         about crafting intuitive and visually appealing web applications that
         enhance user experiences, I bring project management expertise to ensure
