@@ -1,4 +1,7 @@
-import React, { useRef, useState } from "react";
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Section from "./Section";
 import Javascript from "./assets/stack/JavaScript-Logo.png";
 import HTML from "./assets/stack/html.png";
@@ -11,7 +14,6 @@ import ReactLogo from "./assets/stack/reactlogo.png";
 import Redux from "./assets/stack/redux.png";
 import SQLZ from "./assets/stack/sequelize.png";
 import PY from "./assets/stack/python-logo-2.png";
-import { useSwipeable } from "react-swipeable";
 
 const Stack = () => {
   const images = [
@@ -27,61 +29,41 @@ const Stack = () => {
     Git,
     PY,
   ];
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
 
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - imageTrackRef.current.offsetLeft);
-    setScrollLeft(imageTrackRef.current.scrollLeft);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - imageTrackRef.current.offsetLeft;
-    const moveX = x - startX;
-    imageTrackRef.current.scrollLeft = scrollLeft - moveX;
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-  const imageTrackRef = useRef(null);
-
-  const handleSwipedLeft = () => {
-    // Scroll the images to the right
-    imageTrackRef.current.scrollLeft += imageTrackRef.current.offsetWidth;
-  };
-
-  const handleSwipedRight = () => {
-    // Scroll the images to the left
-    imageTrackRef.current.scrollLeft -= imageTrackRef.current.offsetWidth;
-  };
-
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: handleSwipedLeft,
-    onSwipedRight: handleSwipedRight,
-  });
 
   //todo style these with some fancy styling
   return (
-    <Section title="Skills 💡">
-      <div
-        className="imageBody"
-        {...swipeHandlers}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-      >
-        <div className="imageTrack" ref={imageTrackRef}>
-          {images.map((logo) => (
-            <img src={logo} alt="logo" className="image" key={logo} />
-          ))}
-        </div>
-      </div>
-    </Section>
+    <div className="mb-10 mt-[-10rem]">
+      <Section title="Skills 💡"> </Section>
+      <Slider {...settings}>
+        {images.map((logo) => (
+          <img src={logo} alt="logo" className="image" key={logo} />
+        ))}
+      </Slider>
+    </div>
   );
 };
 

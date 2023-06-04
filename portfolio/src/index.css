@@ -6,6 +6,10 @@
   font-family: "League Spartan", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .imageBody {
   height: 100vh;
   width: 100vw;
@@ -13,10 +17,9 @@
   overflow: hidden;
 }
 
-.imageTrack > .image {
+.image {
   width: 50vmin;
   height: 50vmin;
-  object-fit: fill;
   object-position: center;
 }
 
