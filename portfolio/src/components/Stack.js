@@ -56,7 +56,7 @@ const Stack = () => {
 
   //todo style these with some fancy styling
   return (
-    <div className="mb-10 mt-[-10rem]">
+    <div className="mb-10">
       <Section title="Skills 💡"> </Section>
       <Slider {...settings}>
         {images.map((logo) => (
