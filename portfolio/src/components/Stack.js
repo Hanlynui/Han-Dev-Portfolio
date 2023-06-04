@@ -1,9 +1,11 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Section from "./Section";
 import Javascript from "./assets/stack/JavaScript-Logo.png";
 import HTML from "./assets/stack/html.png";
 import CSS from "./assets/stack/css.png";
-import CLogo from "./assets/stack/clogo.png";
 import Git from "./assets/stack/git.png";
 import NodeExp from "./assets/stack/nodeexpress.jpeg";
 import OpenAi from "./assets/stack/openai.png";
@@ -26,16 +28,42 @@ const Stack = () => {
     SQLZ,
     Git,
     PY,
-    CLogo,
   ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
+  };
 
   //todo style these with some fancy styling
   return (
-    <Section title="Skills">
-      {images.map((logo) => (
-        <img src={logo} alt="logo" />
-      ))}
-    </Section>
+    <div className="mb-10 mt-[-10rem]">
+      <Section title="Skills 💡"> </Section>
+      <Slider {...settings}>
+        {images.map((logo) => (
+          <img src={logo} alt="logo" className="image" key={logo} />
+        ))}
+      </Slider>
+    </div>
   );
 };
 
