@@ -5,3 +5,22 @@
 * {
   font-family: "League Spartan", sans-serif;
 }
+
+.imageBody {
+  height: 100vh;
+  width: 100vw;
+  margin: 0rem;
+  overflow: hidden;
+}
+
+.imageTrack > .image {
+  width: 50vmin;
+  height: 50vmin;
+  object-fit: fill;
+  object-position: center;
+}
+
+.imageTrack {
+  display: flex;
+  gap: 4vmin;
+}
