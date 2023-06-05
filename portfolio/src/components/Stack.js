@@ -58,8 +58,10 @@ const Stack = () => {
   // todo maybe change the photos so dark mode looks better
   return (
     <div className="mb-10">
-      <Section title="Skills 💡"> </Section>
-      <Slider {...settings} className="overflow-hidden mt-[-5%]">
+      <Section title="Skills 💡" subtitle="Swipe to see more!">
+        {" "}
+      </Section>
+      <Slider {...settings} className="overflow-hidden mt-[-4%]">
         {images.map((logo) => (
           <img src={logo} alt="logo" className="image" key={logo} />
         ))}
