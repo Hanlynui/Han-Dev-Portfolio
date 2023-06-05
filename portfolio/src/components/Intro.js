@@ -62,7 +62,7 @@ const Intro = () => {
           className="w-70 h-70 md:w-72 md:h-72 object-cover object-top bg-gradient-to-b from-gray-300 rounded-xl pt-5"
         ></img>
         <a
-          href="https://docs.google.com/document/d/1-B6rBqbHYNsm_YL0CxatxwbeWFtt8DV9/edit?usp=sharing&ouid=102197811022513384394&rtpof=true&sd=true"
+          href="https://docs.google.com/document/d/1whewvK-nOSju76kK7WVeuk0MUaIQelb-/edit?usp=sharing&ouid=102197811022513384394&rtpof=true&sd=true"
           alt="resume"
           target="_blank"
           rel="noopener noreferrer"
