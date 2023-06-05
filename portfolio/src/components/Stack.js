@@ -54,11 +54,12 @@ const Stack = () => {
     ],
   };
 
-  //todo style these with some fancy styling
+  // todo scrolling bug on mobile where page can get scrolled to the right a little
+  // todo maybe change the photos so dark mode looks better
   return (
-    <div className="mb-10 mt-[-10rem]">
+    <div className="mb-10">
       <Section title="Skills 💡"> </Section>
-      <Slider {...settings}>
+      <Slider {...settings} className="overflow-hidden mt-[-5%]">
         {images.map((logo) => (
           <img src={logo} alt="logo" className="image" key={logo} />
         ))}
