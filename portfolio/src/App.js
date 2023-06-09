@@ -6,7 +6,7 @@ import Contact from "./components/Contact";
 import Stack from "./components/Stack";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <div>
