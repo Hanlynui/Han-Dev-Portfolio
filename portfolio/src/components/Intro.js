@@ -6,7 +6,7 @@ import han from "./assets/linhanyuBRM.png";
 
 const Intro = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-start items-center p-6 text-center">
+    <div className="flex flex-col justify-start items-center p-6 text-center">
       {" "}
       <h2 className="text-5xl text-rose-700 uppercase font-bold">Han Yu Lin</h2>
       <h3 className="py-3 text-2xl">Fullstack Software Engineer</h3>
