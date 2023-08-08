@@ -3,6 +3,7 @@ import Section from "./Section";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
+  // !uses Getform.io
   const [query, setQuery] = useState({
     name: "",
     phone: "",
