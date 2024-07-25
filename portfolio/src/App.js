@@ -4,6 +4,8 @@ import Intro from "./components/Intro";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Stack from "./components/Stack";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Redirect from "./components/Redirect";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -19,6 +21,9 @@ function App() {
           <Projects />
           <Contact />
         </div>
+        <Routes>
+          <Route path="/redirect" element={<Redirect />} />
+        </Routes>
       </div>
     </div>
   );
