@@ -20,13 +20,13 @@ const Intro = () => {
             style={{ color: "#ffd500" }}
           />
         </span>
-        , nice to meet you here! I'm your Fullstack Software Engineer in a suit
-        with expertise in React, Redux, UI/UX design, AI, and more... Passionate
-        about crafting intuitive and visually appealing web applications that
-        enhance user experiences, I bring project management expertise to ensure
-        seamless coordination and deliver exceptional outcomes. Let's
-        collaborate on innovative solutions that provide remarkable value to
-        your users.
+        , nice to meet you here! I'm a highly motivated and 2x AWS Certified
+        Fullstack Software Engineer, skilled in both frontend and backend
+        development. My robust background in React.js, AWS, UI/UX design, and AI
+        technologies is complemented by hands-on experience in door-to-door and
+        cold sales, demonstrating my adaptability, resilience, and quick
+        learning abilities. Let's collaborate to bring your vision to life and
+        deliver remarkable value to your users.
       </p>
       <div
         className="flex justify-evenly

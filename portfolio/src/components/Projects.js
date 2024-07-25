@@ -2,6 +2,7 @@ import React from "react";
 import Section from "./Section";
 import fidgetSpinnerWeb from "./assets/3dfidgetweb.png";
 import homePageRITH from "./assets/homepageRITH.png";
+import LangTrain from "./assets/langtrain-ad.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -14,7 +15,7 @@ const Projects = () => {
       id: 1,
       github:
         "https://github.com/CapstoneGroupThree/Robin-In-the-Hood-Trading-Corp-1",
-      site: "https://rith-trading.onrender.com/",
+      // site: "",
       video: "https://www.youtube.com/watch?v=CEUu0Cvp3uU",
     },
     {
@@ -22,7 +23,14 @@ const Projects = () => {
       title: "3d Fidget Spinner",
       id: 2,
       github: "https://github.com/Hanlynui/Stress-Relief-Ultra",
-      site: "https://3d-fidget-spinner.com/",
+      site: "http://3dfidgetspinner.s3-website.us-east-2.amazonaws.com",
+    },
+    {
+      image: LangTrain,
+      title: "LangTrain AI Language Teacher",
+      id: 2,
+      // github: "https://github.com/Hanlynui/Stress-Relief-Ultra",
+      site: "http://langtrainwaitlist.s3-website.us-east-2.amazonaws.com/",
     },
   ];
 
