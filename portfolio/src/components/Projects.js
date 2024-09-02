@@ -29,8 +29,9 @@ const Projects = () => {
       image: LangTrain,
       title: "LangTrain AI Language Teacher",
       id: 2,
-      // github: "https://github.com/Hanlynui/Stress-Relief-Ultra",
+      github: "https://github.com/LangTrain/LangTrain-App",
       site: "http://langtrainwaitlist.s3-website.us-east-2.amazonaws.com/",
+      video: "https://www.youtube.com/watch?v=sMpO4HBXUq0",
     },
   ];
 
